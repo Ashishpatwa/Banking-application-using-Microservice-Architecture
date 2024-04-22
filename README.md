@@ -2,17 +2,17 @@
 I am using Mysql database as a  accountMicroservice and customerMicroservice for Account and Customer microservices respectively. 
 
 
-# Service Registory port Number:- 8761 
-# Config-Server port Number:- 9093 
-# Api-Gateway port Number:- 9092 
-# Account-Service port number:- 9090 
-# Customer-Service port number:- 9091 
+## Service Registory port Number:- 8761 
+## Config-Server port Number:- 9093 
+## Api-Gateway port Number:- 9092 
+## Account-Service port number:- 9090 
+## Customer-Service port number:- 9091 
 
  
 
-## API END-POINTS 
+# API END-POINTS 
 
-# For creating customer [POST] 
+## For creating customer [POST] 
 
  http://localhost:9092/api/customer/add-customer 
 
