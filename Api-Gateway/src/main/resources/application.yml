@@ -1,0 +1,34 @@
+server:
+  port: 9092
+
+  
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    discovery:
+      enabled: true
+    gateway:
+      routes:
+      - id: CUSTOMER-SERVICE
+        uri: lb://CUSTOMER-SERVICE
+        predicates:
+        - Path= /api/customer/**
+
+      - id: ACCOUNT-SERVICE
+        uri: lb://ACCOUNT-SERVICE
+        predicates:
+        - Path= /api/account/**
+  config:
+    import: optional:configserver:http://localhost:9093
+        
+
+
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+      
+
